@@ -1,0 +1,25 @@
+{
+  "name": "github-markup-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-sass": "node-sass",
+    "sass": "node-sass -wr --source-map true styles/main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohjs/github-markup-challenge.git"
+  },
+  "keywords": [],
+  "author": "Roh Woohyeon <roh.woohyeon@gmail.com> (https://www.rohwoohyeon.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohjs/github-markup-challenge/issues"
+  },
+  "homepage": "https://github.com/rohjs/github-markup-challenge#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
