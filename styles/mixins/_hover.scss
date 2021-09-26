@@ -1,0 +1,12 @@
+@mixin hover($color) {
+  $opacity: 0.1;
+  @if ($color == $black) {
+    $opacity: 0.075;
+  }
+
+  transition: all 200ms;
+
+  &:hover {
+    background-color: rgba($color, $opacity);
+  }
+}
