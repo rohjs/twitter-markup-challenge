@@ -4,9 +4,17 @@
     $opacity: 0.075;
   }
 
-  transition: all 200ms;
+  transition: background-color 200ms;
 
   &:hover {
     background-color: rgba($color, $opacity);
+  }
+}
+
+@mixin darken-hover($color, $intensity: 5) {
+  transition: background-color 100ms;
+
+  &:hover {
+    background-color: darken($blue, $intensity);
   }
 }
