@@ -476,4 +476,106 @@ address {
   .gnb button:hover {
     background-color: #0f8ee4; }
 
+.timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 54px;
+  padding: 0 15px;
+  border-bottom: 1px solid #eff3f4; }
+  .timeline-header > h1 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+    color: #000; }
+  .timeline-header .dropdown {
+    position: relative; }
+    .timeline-header .dropdown > button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 200ms;
+      width: 34px;
+      height: 34px;
+      border-radius: 17px; }
+      .timeline-header .dropdown > button:hover {
+        background-color: rgba(0, 0, 0, 0.075); }
+      .timeline-header .dropdown > button img {
+        display: block;
+        width: 20px;
+        height: 20px; }
+    .timeline-header .dropdown > div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 350px;
+      padding-top: 8px;
+      overflow: hidden;
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 0 15px rgba(101, 119, 134, 0.2), 0 0 3px 1px rgba(101, 119, 134, 0.15); }
+      .timeline-header .dropdown > div h2 {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #000;
+        padding-bottom: 12px;
+        text-align: center;
+        border-bottom: 1px solid #eff3f4; }
+      .timeline-header .dropdown > div button,
+      .timeline-header .dropdown > div a {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #0f1419;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        transition: background-color 200ms;
+        width: 100%;
+        padding: 16px;
+        text-align: left; }
+        .timeline-header .dropdown > div button:hover,
+        .timeline-header .dropdown > div a:hover {
+          background-color: #f7f9f9; }
+        .timeline-header .dropdown > div button strong,
+        .timeline-header .dropdown > div button span,
+        .timeline-header .dropdown > div a strong,
+        .timeline-header .dropdown > div a span {
+          display: block; }
+        .timeline-header .dropdown > div button strong,
+        .timeline-header .dropdown > div a strong {
+          font-weight: 400; }
+        .timeline-header .dropdown > div button span,
+        .timeline-header .dropdown > div a span {
+          font-size: 13px;
+          line-height: 16px;
+          color: #536471;
+          margin-top: 4px; }
+        .timeline-header .dropdown > div button::before,
+        .timeline-header .dropdown > div a::before {
+          display: block;
+          width: 18px;
+          height: 18px;
+          margin-right: 16px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          content: ''; }
+      .timeline-header .dropdown > div button::before {
+        background-image: url("./assets/icons/icon-swap.svg"); }
+      .timeline-header .dropdown > div a::before {
+        background-image: url("./assets/icons/icon-gear.svg"); }
+      .timeline-header .dropdown > div::before {
+        display: block;
+        width: 48px;
+        height: 48px;
+        margin: 12px auto;
+        background-image: url("./assets/icons/icon-twinkle-colored.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: ''; }
+
 /*# sourceMappingURL=style.css.map */

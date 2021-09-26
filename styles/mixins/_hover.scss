@@ -18,3 +18,11 @@
     background-color: darken($blue, $intensity);
   }
 }
+
+@mixin light-hover() {
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: $background;
+  }
+}
