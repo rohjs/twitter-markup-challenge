@@ -1,0 +1,25 @@
+.container {
+  @include flexbox(center, start);
+  min-width: 275px + 600px + 350px + 30px;
+  margin: 0 auto;
+  overflow-x: auto;
+
+  > header {
+    width: 275px;
+    padding-left: 20px;
+  }
+
+  > main {
+    @include no-scrollbar;
+    width: 600px;
+    height: 100vh;
+    margin-right: 30px;
+    overflow-y: auto;
+    border-right: 1px solid $border;
+    border-left: 1px solid $border;
+  }
+
+  > aside {
+    width: 350px;
+  }
+}
