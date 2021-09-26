@@ -77,7 +77,7 @@ linters:
     force_nesting: true
 
   NestingDepth:
-    enabled: true
+    enabled: false
     max_depth: 6
     ignore_parent_selectors: false
 
