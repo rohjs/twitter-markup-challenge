@@ -1,0 +1,63 @@
+@mixin text-style-13() {
+  font-size: $font-size-13;
+  line-height: $line-height-13;
+  letter-spacing: $letter-spacing-13;
+}
+
+@mixin text-style-14() {
+  font-size: $font-size-14;
+  line-height: $line-height-14;
+  letter-spacing: $letter-spacing-14;
+}
+
+@mixin text-style-15() {
+  font-size: $font-size-15;
+  line-height: $line-height-15;
+  letter-spacing: $letter-spacing-15;
+}
+
+@mixin text-style-17() {
+  font-size: $font-size-17;
+  line-height: $line-height-17;
+  letter-spacing: $letter-spacing-17;
+}
+
+@mixin text-style-20() {
+  font-size: $font-size-20;
+  line-height: $line-height-20;
+  letter-spacing: $letter-spacing-20;
+}
+
+@mixin text-style($size, $args...) {
+  @if ($size == 12) {
+    @include text-style-12;
+  }
+  @if ($size == 13) {
+    @include text-style-13;
+  }
+  @if ($size == 14) {
+    @include text-style-14;
+  }
+  @if ($size == 15) {
+    @include text-style-15;
+  }
+  @if ($size == 17) {
+    @include text-style-17;
+  }
+  @if ($size == 20) {
+    @include text-style-20;
+  }
+
+  @if (length($args) > 0) {
+    @for $i from 1 through length($args) {
+      $arg: nth($args, $i);
+
+      @if (type-of($arg) == color) {
+        color: $arg;
+      }
+      @if (type-of($arg) == number) {
+        font-weight: $arg;
+      }
+    }
+  }
+}
