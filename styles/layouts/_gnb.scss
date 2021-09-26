@@ -2,6 +2,8 @@
   $gnb-icon-list: ('home', 'hash', 'bell', 'message', 'bookmark', 'file', 'user', 'more-circle');
 
   ul {
+    margin-bottom: 16px;
+
     li {
       padding: 4px 0;
 
@@ -35,5 +37,15 @@
         content: '';
       }
     }
+  }
+
+  button {
+    @include flexbox;
+    @include text-style(17, 700, $white);
+    @include darken-hover($blue);
+    width: 100%;
+    height: 50px;
+    background-color: $blue;
+    border-radius: (50px / 2);
   }
 }

@@ -369,16 +369,15 @@ address {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  min-width: 1255px;
+  min-width: 1265px;
   margin: 0 auto;
   overflow-x: auto; }
   .container > header {
-    width: 275px;
-    padding-left: 20px; }
+    width: 275px; }
   .container > main {
     width: 600px;
     height: 100vh;
-    margin-right: 30px;
+    margin-right: 40px;
     overflow-y: auto;
     border-right: 1px solid #eff3f4;
     border-left: 1px solid #eff3f4; }
@@ -387,73 +386,94 @@ address {
   .container > aside {
     width: 350px; }
 
-.global-header h1 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 54px; }
-  .global-header h1 a {
+.global-header {
+  padding-right: 40px;
+  padding-left: 20px; }
+  .global-header h1 {
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: all 200ms;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-    color: #1d9bf0;
-    border-radius: 25px; }
-    .global-header h1 a:hover {
-      background-color: rgba(29, 155, 240, 0.1); }
-    .global-header h1 a img {
-      width: 28px;
-      height: 28px; }
+    justify-content: flex-start;
+    width: 100%;
+    height: 54px;
+    margin-bottom: 8px; }
+    .global-header h1 a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 200ms;
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      color: #1d9bf0;
+      border-radius: 25px; }
+      .global-header h1 a:hover {
+        background-color: rgba(29, 155, 240, 0.1); }
+      .global-header h1 a img {
+        width: 28px;
+        height: 28px; }
 
-.gnb ul li {
-  padding: 4px 0; }
-  .gnb ul li:nth-child(1) a::before {
-    background-image: url("./assets/icons/icon-home.svg"); }
-  .gnb ul li:nth-child(2) a::before {
-    background-image: url("./assets/icons/icon-hash.svg"); }
-  .gnb ul li:nth-child(3) a::before {
-    background-image: url("./assets/icons/icon-bell.svg"); }
-  .gnb ul li:nth-child(4) a::before {
-    background-image: url("./assets/icons/icon-message.svg"); }
-  .gnb ul li:nth-child(5) a::before {
-    background-image: url("./assets/icons/icon-bookmark.svg"); }
-  .gnb ul li:nth-child(6) a::before {
-    background-image: url("./assets/icons/icon-file.svg"); }
-  .gnb ul li:nth-child(7) a::before {
-    background-image: url("./assets/icons/icon-user.svg"); }
-  .gnb ul li:nth-child(8) a::before {
-    background-image: url("./assets/icons/icon-more-circle.svg"); }
-
-.gnb ul a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #000;
-  transition: all 200ms;
-  padding: 12px;
-  padding-right: 32px;
-  border-radius: 30px; }
-  .gnb ul a:hover {
-    background-color: rgba(0, 0, 0, 0.075); }
-  .gnb ul a[aria-current='location'] {
-    font-weight: 700; }
-  .gnb ul a::before {
+.gnb ul {
+  margin-bottom: 16px; }
+  .gnb ul li {
+    padding: 4px 0; }
+    .gnb ul li:nth-child(1) a::before {
+      background-image: url("./assets/icons/icon-home.svg"); }
+    .gnb ul li:nth-child(2) a::before {
+      background-image: url("./assets/icons/icon-hash.svg"); }
+    .gnb ul li:nth-child(3) a::before {
+      background-image: url("./assets/icons/icon-bell.svg"); }
+    .gnb ul li:nth-child(4) a::before {
+      background-image: url("./assets/icons/icon-message.svg"); }
+    .gnb ul li:nth-child(5) a::before {
+      background-image: url("./assets/icons/icon-bookmark.svg"); }
+    .gnb ul li:nth-child(6) a::before {
+      background-image: url("./assets/icons/icon-file.svg"); }
+    .gnb ul li:nth-child(7) a::before {
+      background-image: url("./assets/icons/icon-user.svg"); }
+    .gnb ul li:nth-child(8) a::before {
+      background-image: url("./assets/icons/icon-more-circle.svg"); }
+  .gnb ul a {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    margin-right: 18px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: ''; }
+    justify-content: flex-start;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #000;
+    transition: background-color 200ms;
+    padding: 12px;
+    padding-right: 32px;
+    border-radius: 30px; }
+    .gnb ul a:hover {
+      background-color: rgba(0, 0, 0, 0.075); }
+    .gnb ul a[aria-current='location'] {
+      font-weight: 700; }
+    .gnb ul a::before {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-right: 18px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: ''; }
+
+.gnb button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  transition: background-color 100ms;
+  width: 100%;
+  height: 50px;
+  background-color: #1d9bf0;
+  border-radius: 25px; }
+  .gnb button:hover {
+    background-color: #0f8ee4; }
 
 /*# sourceMappingURL=style.css.map */
