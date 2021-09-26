@@ -1,0 +1,39 @@
+.gnb {
+  $gnb-icon-list: ('home', 'hash', 'bell', 'message', 'bookmark', 'file', 'user', 'more-circle');
+
+  ul {
+    li {
+      padding: 4px 0;
+
+      @for $i from 1 through length($gnb-icon-list) {
+        &:nth-child(#{$i}) a::before {
+          background-image: url('./assets/icons/icon-#{nth($gnb-icon-list, $i)}.svg');
+        }
+      }
+    }
+
+    a {
+      @include inline-flexbox(start);
+      @include text-style(20, 400, $black);
+      @include hover($black);
+      padding: 12px;
+      padding-right: 12px + 20px;
+      border-radius: (60px / 2);
+
+      &[aria-current='location'] {
+        font-weight: 700;
+      }
+
+      &::before {
+        @include inline-flexbox;
+        width: 28px;
+        height: 28px;
+        margin-right: 18px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+      }
+    }
+  }
+}
