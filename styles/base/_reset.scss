@@ -46,6 +46,10 @@ button {
 
 button {
   padding: 0;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
 }
 
 ul,

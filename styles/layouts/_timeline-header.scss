@@ -12,6 +12,13 @@
   .dropdown {
     position: relative;
 
+    &.is-open {
+      > div {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
     > button {
       @include flexbox;
       @include hover($black);
@@ -35,7 +42,10 @@
       overflow: hidden;
       background-color: $white;
       border-radius: 6px;
+      opacity: 0;
+      visibility: hidden;
       box-shadow: $modal-box-shadow;
+      transition: all 300ms;
 
       h2 {
         @include text-style(20, 700, $black);

@@ -1,0 +1,224 @@
+.tweet-form {
+  border-bottom: 1px solid $border;
+
+  h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  form {
+    position: relative;
+    padding-right: 16px;
+    padding-left: 48px + 16px + 16px;
+
+    > a {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
+      border-radius: (48px / 2);
+
+      &:hover::after {
+        opacity: 1;
+      }
+
+      img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+      }
+
+      &::after {
+        @include pos-center;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.1);
+        content: '';
+        opacity: 0;
+        transition: opacity 200ms;
+      }
+    }
+
+    > textarea {
+      @include text-style(20, 400, $dark);
+      width: 100%;
+      padding: 12px 0;
+      margin-top: 8px;
+      resize: none;
+      appearance: none;
+
+      &::placeholder {
+        color: $secondary;
+      }
+    }
+
+    > button {
+      @include inline-flexbox;
+      @include text-style(14, 700, $blue);
+      @include hover($blue);
+      height: 24px;
+      padding: 0 10px;
+      margin-left: -10px;
+      border-radius: (24px / 2);
+
+      &::before {
+        display: block;
+        width: 14px;
+        height: 14px;
+        margin-right: 8px;
+        background-image: url('./assets/icons/icon-earth.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+      }
+    }
+
+    > div {
+      @include flexbox(between);
+      padding: 12px 0;
+      margin-top: 12px;
+      border-top: 1px solid $border;
+
+      > div:first-child {
+        position: relative;
+        left: -8px;
+
+        button {
+          @include inline-flexbox;
+          @include hover($blue);
+          position: relative;
+          width: 34px;
+          height: 34px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 20px 20px;
+          border-radius: (34px / 2);
+
+          &:nth-child(1) {
+            background-image: url('./assets/icons/icon-image.svg');
+          }
+
+          &:nth-child(2) {
+            background-image: url('./assets/icons/icon-gif.svg');
+          }
+
+          &:nth-child(3) {
+            background-image: url('./assets/icons/icon-poll.svg');
+          }
+
+          &:nth-child(4) {
+            background-image: url('./assets/icons/icon-emoji.svg');
+          }
+
+          &:nth-child(5) {
+            background-image: url('./assets/icons/icon-calendar.svg');
+          }
+
+          &:hover {
+            span {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+
+          span {
+            @include pos-center-x;
+            top: calc(100% + 2px);
+            padding: 2px 3px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: $white;
+            background-color: rgba($black, 0.6);
+            border-radius: 2px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 200ms;
+          }
+        }
+
+        input {
+          position: absolute;
+          visibility: hidden;
+        }
+      }
+
+      > div:last-child {
+        @include flexbox(end);
+
+        strong,
+        button:first-of-type {
+          @include inline-flexbox;
+          width: 24px;
+          height: 24px;
+          border-radius: (24px / 2);
+        }
+
+        strong {
+          margin-right: 10px + 10px + 1px;
+          border: 2px solid $border;
+
+          &::after {
+            position: relative;
+            left: 10px + 1px + (24px / 2);
+            display: inline-block;
+            width: 1px;
+            height: 30px;
+            background-color: darken($border, 8);
+            content: '';
+          }
+        }
+
+        button:first-of-type {
+          @include hover($blue);
+          position: relative;
+          margin-right: 16px;
+          background-image: url('./assets/icons/icon-plus.svg');
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 18px 18px;
+          border: 1px solid darken($border, 8);
+
+          span {
+            @include pos-center-x;
+            top: calc(100% + 2px);
+            padding: 2px 3px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: $white;
+            background-color: rgba($black, 0.6);
+            border-radius: 2px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 200ms;
+          }
+        }
+
+        button:last-of-type {
+          @include text-style(14, 700, $white);
+          width: 76px;
+          height: 36px;
+          background-color: $blue;
+          border-radius: (36px / 2);
+          transition: all 200ms;
+
+          &:disabled {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
