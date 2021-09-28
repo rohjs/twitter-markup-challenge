@@ -11,11 +11,16 @@
   }
 }
 
-@mixin darken-hover($color, $intensity: 5) {
+@mixin darken-hover($color) {
+  $intensity: 5;
+  @if ($color == $background) {
+    $intensity: 4;
+  }
+
   transition: background-color 100ms;
 
   &:hover {
-    background-color: darken($blue, $intensity);
+    background-color: darken($color, $intensity);
   }
 }
 

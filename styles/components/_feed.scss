@@ -73,21 +73,18 @@
       dt {
         @include hidden;
       }
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
 
     > div {
       position: relative;
 
       > button {
-        @include flexbox;
-        @include hover($blue);
-        width: 34px;
-        height: 34px;
+        @include icon-button;
         background-image: url('./assets/icons/icon-more.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 18px 18px;
-        border-radius: (34px / 2);
       }
 
       > div {

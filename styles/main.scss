@@ -7,13 +7,15 @@
 @import './base/global';
 
 @import './mixins/flexbox';
+@import './mixins/hover';
+@import './mixins/icon-button';
 @import './mixins/positions';
 @import './mixins/scrollbar';
 @import './mixins/text-style';
-@import './mixins/hover';
 
 @import './components/feed';
 
+@import './layouts/browse';
 @import './layouts/grid';
 @import './layouts/global-header';
 @import './layouts/gnb';
