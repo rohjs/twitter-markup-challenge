@@ -492,6 +492,8 @@ address {
           opacity: 0;
           visibility: hidden;
           transition: all 200ms; }
+        .feed > header > div > button:hover {
+          background-image: url("./assets/icons/icon-more-colored.svg"); }
       .feed > header > div > div {
         position: absolute;
         display: none; }
@@ -576,6 +578,94 @@ address {
         position: relative;
         left: 30px;
         transition: all 100ms; }
+
+.tag {
+  transition: background-color 100ms;
+  position: relative;
+  display: block;
+  padding: 12px 16px; }
+  .tag:hover {
+    background-color: #ebf0f0; }
+  .tag span,
+  .tag strong {
+    display: block; }
+  .tag span {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #536471; }
+    .tag span:nth-child(2) {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 400; }
+  .tag strong {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #0f1419;
+    padding-top: 2px;
+    padding-bottom: 4px; }
+    .tag strong:last-of-type:not(:first-of-type) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 500;
+      color: #4d5c68;
+      padding-top: 4px; }
+      .tag strong:last-of-type:not(:first-of-type)::before {
+        display: block;
+        width: 14px;
+        height: 14px;
+        margin-right: 4px;
+        background-image: url("./assets/icons/icon-promotion.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: ''; }
+  .tag button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 200ms;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    border-radius: 17px;
+    transition: background-color 200ms;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background-image: url("./assets/icons/icon-more.svg"); }
+    .tag button:hover {
+      background-color: rgba(29, 155, 240, 0.1); }
+    .tag button:hover span {
+      opacity: 1;
+      visibility: visible; }
+    .tag button span {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(100% + 2px);
+      padding: 2px 3px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #fff;
+      white-space: nowrap;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 2px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 200ms; }
+    .tag button:hover {
+      background-color: rgba(29, 155, 240, 0.1); }
+    .tag button:hover {
+      background-image: url("./assets/icons/icon-more-colored.svg"); }
 
 .browse {
   display: flex;

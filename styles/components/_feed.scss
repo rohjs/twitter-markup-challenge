@@ -89,6 +89,10 @@
       > button {
         @include icon-button;
         background-image: url('./assets/icons/icon-more.svg');
+
+        &:hover {
+          background-image: url('./assets/icons/icon-more-colored.svg');
+        }
       }
 
       > div {

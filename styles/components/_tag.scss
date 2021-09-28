@@ -1,0 +1,56 @@
+.tag {
+  @include darken-hover($background);
+  position: relative;
+  display: block;
+  padding: 12px 16px;
+
+  span,
+  strong {
+    display: block;
+  }
+
+  span {
+    @include text-style(13, 400, $primary);
+
+    &:nth-child(2) {
+      @include text-style(15, 400);
+    }
+  }
+
+  strong {
+    @include text-style(15, 700, $dark);
+    padding-top: 2px;
+    padding-bottom: 4px;
+
+    &:last-of-type:not(:first-of-type) {
+      @include flexbox(start);
+      @include text-style(12, 500, darken($primary, 3));
+      padding-top: 4px;
+
+      &::before {
+        display: block;
+        width: 14px;
+        height: 14px;
+        margin-right: 4px;
+        background-image: url('./assets/icons/icon-promotion.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+      }
+    }
+  }
+
+  button {
+    @include icon-button;
+    @include hover($blue);
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background-image: url('./assets/icons/icon-more.svg');
+
+    &:hover {
+      background-image: url('./assets/icons/icon-more-colored.svg');
+    }
+  }
+}
