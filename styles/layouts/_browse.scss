@@ -51,4 +51,42 @@
       border-radius: 0 0 20px 20px;
     }
   }
+
+  footer {
+    @include flexbox(start);
+    @include text-style(13, 400);
+    flex-wrap: wrap;
+    padding: 0 16px;
+
+    a {
+      @include inline-flexbox;
+      height: 20px;
+      padding-right: 12px;
+      margin-bottom: 2px;
+      white-space: nowrap;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:last-of-type {
+        margin-right: 8px;
+
+        &::after {
+          width: 12px;
+          height: 12px;
+          margin-left: 2px;
+          background-image: url('./assets/icons/icon-more.svg');
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          content: '';
+        }
+      }
+    }
+
+    span {
+      cursor: default;
+    }
+  }
 }

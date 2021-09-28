@@ -454,6 +454,8 @@ address {
         border: 0 !important; }
       .feed > header > dl a:hover {
         text-decoration: underline; }
+      .feed > header > dl time {
+        cursor: default; }
     .feed > header > div {
       position: relative; }
       .feed > header > div > button {
@@ -484,6 +486,7 @@ address {
           font-weight: 500;
           letter-spacing: -0.02em;
           color: #fff;
+          white-space: nowrap;
           background-color: rgba(0, 0, 0, 0.6);
           border-radius: 2px;
           opacity: 0;
@@ -641,6 +644,7 @@ address {
           font-weight: 500;
           letter-spacing: -0.02em;
           color: #fff;
+          white-space: nowrap;
           background-color: rgba(0, 0, 0, 0.6);
           border-radius: 2px;
           opacity: 0;
@@ -658,6 +662,38 @@ address {
       border-radius: 0 0 20px 20px; }
       .browse section > button:hover {
         background-color: #ebf0f0; }
+  .browse footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    padding: 0 16px; }
+    .browse footer a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      padding-right: 12px;
+      margin-bottom: 2px;
+      white-space: nowrap; }
+      .browse footer a:hover {
+        text-decoration: underline; }
+      .browse footer a:last-of-type {
+        margin-right: 8px; }
+        .browse footer a:last-of-type::after {
+          width: 12px;
+          height: 12px;
+          margin-left: 2px;
+          background-image: url("./assets/icons/icon-more.svg");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          content: ''; }
+    .browse footer span {
+      cursor: default; }
 
 .container {
   display: flex;
@@ -852,13 +888,44 @@ main {
       opacity: 1;
       visibility: visible; }
     .timeline-header .dropdown > button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 200ms;
+      position: relative;
+      width: 34px;
+      height: 34px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      border-radius: 17px;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: background-color 200ms;
-      width: 34px;
-      height: 34px;
-      border-radius: 17px; }
+      background-image: url("./assets/icons/icon-twinkle.svg");
+      background-size: 20px 20px; }
+      .timeline-header .dropdown > button:hover {
+        background-color: rgba(0, 0, 0, 0.075); }
+      .timeline-header .dropdown > button:hover span {
+        opacity: 1;
+        visibility: visible; }
+      .timeline-header .dropdown > button span {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(100% + 2px);
+        padding: 2px 3px;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: #fff;
+        white-space: nowrap;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 2px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 200ms; }
       .timeline-header .dropdown > button:hover {
         background-color: rgba(0, 0, 0, 0.075); }
       .timeline-header .dropdown > button img {
@@ -1057,6 +1124,7 @@ main {
             font-weight: 500;
             letter-spacing: -0.02em;
             color: #fff;
+            white-space: nowrap;
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 2px;
             opacity: 0;
@@ -1132,6 +1200,7 @@ main {
             font-weight: 500;
             letter-spacing: -0.02em;
             color: #fff;
+            white-space: nowrap;
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 2px;
             opacity: 0;

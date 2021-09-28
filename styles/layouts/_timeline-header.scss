@@ -20,11 +20,11 @@
     }
 
     > button {
+      @include icon-button($black);
       @include flexbox;
       @include hover($black);
-      width: 34px;
-      height: 34px;
-      border-radius: (34px / 2);
+      background-image: url('./assets/icons/icon-twinkle.svg');
+      background-size: 20px 20px;
 
       img {
         display: block;
