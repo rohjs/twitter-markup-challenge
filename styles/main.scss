@@ -12,9 +12,12 @@
 @import './mixins/text-style';
 @import './mixins/hover';
 
+@import './components/feed';
+
 @import './layouts/grid';
 @import './layouts/global-header';
 @import './layouts/gnb';
+@import './layouts/main';
 @import './layouts/timeline';
 @import './layouts/timeline-header';
 @import './layouts/tweet-form';

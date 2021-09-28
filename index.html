@@ -53,117 +53,169 @@
           </div>
         </header>
 
-        <section class="tweet-form">
-          <h1>Tweet Form</h1>
+        <div>
+          <section class="tweet-form">
+            <h1>Tweet Form</h1>
 
-          <form action="#" method="POST">
-            <a href="/kimbugx">
-              <img src="./assets/images/img-user-1.jpg" alt="@kimbugx" />
-            </a>
-            <textarea placeholder="What's happening?" maxlength="280"></textarea>
-            <button>Everyone can reply</button>
-
-            <div>
-              <div>
-                <button type="button">
-                  <span>Media</span>
-                </button>
-                <button type="button">
-                  <span>GIF</span>
-                </button>
-                <button type="button">
-                  <span>Poll</span>
-                </button>
-                <button type="button">
-                  <span>Emoji</span>
-                </button>
-                <button type="button">
-                  <span>Schedule</span>
-                </button>
-
-                <input type="file" multiple accept="image/*, video/*" />
-              </div>
+            <form action="#" method="POST">
+              <a href="/kimbugx">
+                <img src="./assets/images/img-user-1.jpg" alt="@kimbugx" />
+              </a>
+              <textarea placeholder="What's happening?" maxlength="280"></textarea>
+              <button>Everyone can reply</button>
 
               <div>
-                <strong aria-label="0 out of 280 characters"></strong>
-                <button type="button">
-                  <span>Add</span>
-                </button>
-                <button type="submit">Tweet</button>
-              </div>
-            </div>
-          </form>
-        </section>
+                <div>
+                  <button type="button">
+                    <span>Media</span>
+                  </button>
+                  <button type="button">
+                    <span>GIF</span>
+                  </button>
+                  <button type="button">
+                    <span>Poll</span>
+                  </button>
+                  <button type="button">
+                    <span>Emoji</span>
+                  </button>
+                  <button type="button">
+                    <span>Schedule</span>
+                  </button>
 
-        <section class="timeline">
-          <h1>Your Timeline</h1>
+                  <input type="file" multiple accept="image/*, video/*" />
+                </div>
+
+                <div>
+                  <strong aria-label="0 out of 280 characters"></strong>
+                  <button type="button">
+                    <span>Add</span>
+                  </button>
+                  <button type="submit">Tweet</button>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <section class="timeline">
+            <h1>Your Timeline</h1>
+
+            <ol>
+              <li>
+                <article class="feed">
+                  <header>
+                    <h2>A Tweet from 뵈요를 보면 우는 펭귄</h2>
+                    <a href="/seeupeng">
+                      <img src="./assets/images/img-user-2.png" alt="뵈요를 보면 우는 펭귄" />
+                    </a>
+
+                    <strong>
+                      <a href="/seeupeng"> 뵈요를 보면 우는 펭귄 </a>
+                    </strong>
+                    <dl>
+                      <div>
+                        <dt>Username</dt>
+                        <dd>
+                          <a href="/seeupeng"> @seeupeng </a>
+                        </dd>
+                      </div>
+                      <div>
+                        <dt>Posted</dt>
+                        <dd>
+                          <time datetime="1993-05-26">May 26</time>
+                        </dd>
+                      </div>
+                    </dl>
+
+                    <div>
+                      <button type="button" aria-label="Show Options"></button>
+                      <div>
+                        <button type="button">
+                          <!-- Icon -->
+                          Show less often
+                        </button>
+                        <button type="button">
+                          <!-- Icon -->
+                          Embed Tweet
+                        </button>
+                        <button type="button">
+                          <!-- Icon -->
+                          Unfollow @seeupeng
+                        </button>
+                        <button type="button">
+                          <!-- Icon -->
+                          Mute @seeupeng
+                        </button>
+                        <button type="button">
+                          <!-- Icon -->
+                          Block @seeupeng
+                        </button>
+                        <button type="button">
+                          <!-- Icon -->
+                          Report Tweet
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+
+                  <div>
+                    <p>봬요, 봬도, 봬서, 뵀어요.</p>
+                    <p>뵈어요 = 봬요, 뵈어도 = 봬도, 뵈어서 = 봬서, 뵈었어요 = 뵀어요.</p>
+                  </div>
+
+                  <footer>
+                    <button type="button">
+                      <span>Reply</span>
+                      <strong aria-label="3 replied">3</strong>
+                    </button>
+                    <button type="button">
+                      <span>Retweet</span>
+                      <strong aria-label="3 retweeted">3</strong>
+                    </button>
+                    <button type="button">
+                      <span>Like</span>
+                      <strong aria-label="100 liked">100</strong>
+                    </button>
+                    <button type="button">
+                      <span>Share</span>
+                    </button>
+                  </footer>
+                </article>
+              </li>
+            </ol>
+          </section>
+        </div>
+      </main>
+
+      <aside>
+        <h1>Browse</h1>
+
+        <form>
+          <input type="text" placeholder="Search Twitter" />
+        </form>
+
+        <section>
+          <header>
+            <h2>Trends for you</h2>
+            <button type="button">
+              <span>Settings</span>
+            </button>
+          </header>
 
           <ol>
             <li>
-              <article>
-                <h1>A Tweet from 김익명</h1>
-                <header>
-                  <a href="#">
-                    <img src="#" alt="김익명" />
-                  </a>
-                  <h2>
-                    <a href="#">
-                      김익명
-                    </a>
-                  </h2>
-                  <dl>
-                    <div>
-                      <dt>Username</dt>
-                      <dd>
-                        <a href="#">
-                          @anonymouskim
-                        </a>
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>Posted</dt>
-                      <dd>
-                        <a href="#">
-                          Dec 25
-                        </a>
-                      </dd>
-                    </div>
-                  </dl>
-                  <button type="button" aria-label="Options">
-                    <!-- Icon -->
-                  </button>
-                  <div>
-                    <button type="button">
-                      <!-- Icon -->
-                      Show less often
-                    </button>
-                    <button type="button">
-                      <!-- Icon -->
-                      Embed Tweet
-                    </button>
-                    <button type="button">
-                      <!-- Icon -->
-                      Unfollow @anonymouskim
-                    </button>
-                    <button type="button">
-                      <!-- Icon -->
-                      Mute @anonymouskim
-                    </button>
-                    <button type="button">
-                      <!-- Icon -->
-                      Block @anonymouskim
-                    </button>
-                    <button type="button">
-                      <!-- Icon -->
-                      Report Tweet
-                    </button>
-                  </div>
-                </header>
+
             </li>
           </ol>
         </section>
-      </main>
-      <aside></aside>
+
+        <section>
+          <header>
+            <h2>Who to follow</h2>
+          </header>
+        </section>
+      </section>
+
+
     </div>
   </body>
 </html>

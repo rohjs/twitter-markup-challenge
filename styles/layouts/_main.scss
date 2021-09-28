@@ -1,0 +1,18 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border-right: 1px solid $border;
+  border-left: 1px solid $border;
+
+  .timeline-header {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  > div {
+    @include no-scrollbar;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+}

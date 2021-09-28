@@ -1,0 +1,209 @@
+.feed {
+  @include light-hover;
+  position: relative;
+  padding-right: 16px;
+  padding-left: 48px + 16px + 16px;
+
+  > header {
+    @include flexbox(start);
+    width: 100%;
+    padding-top: 8px;
+    white-space: nowrap;
+
+    h2 {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    > a {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
+      border-radius: (48px / 2);
+
+      &:hover::after {
+        opacity: 1;
+      }
+
+      img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+      }
+
+      &::after {
+        @include pos-center;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.1);
+        content: '';
+        opacity: 0;
+        transition: opacity 200ms;
+      }
+    }
+
+    > strong {
+      @include text-style(15, 700, $black);
+      margin-right: 4px;
+
+      &:hover {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    > dl {
+      @include flexbox(start);
+      @include text-style(15, 400, $primary);
+      flex-grow: 1;
+
+      > div:first-child {
+        @include inline-flexbox(start);
+
+        &::after {
+          margin: 0 4px;
+          content: '·';
+        }
+      }
+
+      dt {
+        position: absolute;
+        visibility: hidden;
+      }
+    }
+
+    > div {
+      position: relative;
+
+      > button {
+        @include flexbox;
+        @include hover($blue);
+        width: 34px;
+        height: 34px;
+        background-image: url('./assets/icons/icon-more.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        border-radius: (34px / 2);
+      }
+
+      > div {
+        position: absolute;
+        display: none;
+      }
+    }
+  }
+
+  > div {
+    margin-top: -2px;
+
+    p {
+      @include text-style(15, 400, $black);
+    }
+  }
+
+  > footer {
+    @include flexbox(between);
+    padding: 10px 80px 8px 0;
+    margin-left: -10px;
+
+    button {
+      @include inline-flexbox;
+      @include hover($blue);
+      position: relative;
+      width: 34px;
+      height: 34px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      border-radius: (34px / 2);
+
+      &:nth-child(1) {
+        background-image: url('./assets/icons/icon-comment.svg');
+
+        &:hover {
+          background-image: url('./assets/icons/icon-comment-colored.svg');
+        }
+      }
+
+      &:nth-child(2) {
+        @include hover($green);
+        background-image: url('./assets/icons/icon-retweet.svg');
+
+        &:hover {
+          background-image: url('./assets/icons/icon-retweet-colored.svg');
+
+          strong {
+            color: $green;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        @include hover($pink);
+        background-image: url('./assets/icons/icon-heart.svg');
+
+        &:hover {
+          background-image: url('./assets/icons/icon-heart-colored.svg');
+
+          strong {
+            color: $pink;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        background-image: url('./assets/icons/icon-share.svg');
+
+        &:hover {
+          background-image: url('./assets/icons/icon-share-colored.svg');
+        }
+      }
+
+      &:hover {
+        span {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        strong {
+          color: $blue;
+        }
+      }
+
+      span {
+        @include pos-center-x;
+        top: calc(100% + 2px);
+        padding: 2px 3px;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: $white;
+        background-color: rgba($black, 0.6);
+        border-radius: 2px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 200ms;
+      }
+
+      strong {
+        @include text-style(13, 400, $primary);
+        position: relative;
+        left: 30px;
+        transition: all 100ms;
+      }
+    }
+  }
+}

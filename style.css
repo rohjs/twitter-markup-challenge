@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -367,6 +368,184 @@ address {
   white-space: nowrap !important;
   border: 0 !important; }
 
+.feed {
+  transition: background-color 200ms;
+  position: relative;
+  padding-right: 16px;
+  padding-left: 80px; }
+  .feed:hover {
+    background-color: #f7f9f9; }
+  .feed > header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 8px;
+    white-space: nowrap; }
+    .feed > header h2 {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0; }
+    .feed > header > a {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
+      border-radius: 24px; }
+      .feed > header > a:hover::after {
+        opacity: 1; }
+      .feed > header > a img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover; }
+      .feed > header > a::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        content: '';
+        opacity: 0;
+        transition: opacity 200ms; }
+    .feed > header > strong {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 700;
+      color: #000;
+      margin-right: 4px; }
+      .feed > header > strong:hover a {
+        text-decoration: underline; }
+    .feed > header > dl {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #536471;
+      flex-grow: 1; }
+      .feed > header > dl > div:first-child {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start; }
+        .feed > header > dl > div:first-child::after {
+          margin: 0 4px;
+          content: '·'; }
+      .feed > header > dl dt {
+        position: absolute;
+        visibility: hidden; }
+    .feed > header > div {
+      position: relative; }
+      .feed > header > div > button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 200ms;
+        width: 34px;
+        height: 34px;
+        background-image: url("./assets/icons/icon-more.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        border-radius: 17px; }
+        .feed > header > div > button:hover {
+          background-color: rgba(29, 155, 240, 0.1); }
+      .feed > header > div > div {
+        position: absolute;
+        display: none; }
+  .feed > div {
+    margin-top: -2px; }
+    .feed > div p {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #000; }
+  .feed > footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px 8px 0;
+    margin-left: -10px; }
+    .feed > footer button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 200ms;
+      position: relative;
+      width: 34px;
+      height: 34px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      border-radius: 17px; }
+      .feed > footer button:hover {
+        background-color: rgba(29, 155, 240, 0.1); }
+      .feed > footer button:nth-child(1) {
+        background-image: url("./assets/icons/icon-comment.svg"); }
+        .feed > footer button:nth-child(1):hover {
+          background-image: url("./assets/icons/icon-comment-colored.svg"); }
+      .feed > footer button:nth-child(2) {
+        transition: background-color 200ms;
+        background-image: url("./assets/icons/icon-retweet.svg"); }
+        .feed > footer button:nth-child(2):hover {
+          background-color: rgba(0, 186, 124, 0.1); }
+        .feed > footer button:nth-child(2):hover {
+          background-image: url("./assets/icons/icon-retweet-colored.svg"); }
+          .feed > footer button:nth-child(2):hover strong {
+            color: #00ba7c; }
+      .feed > footer button:nth-child(3) {
+        transition: background-color 200ms;
+        background-image: url("./assets/icons/icon-heart.svg"); }
+        .feed > footer button:nth-child(3):hover {
+          background-color: rgba(249, 24, 128, 0.1); }
+        .feed > footer button:nth-child(3):hover {
+          background-image: url("./assets/icons/icon-heart-colored.svg"); }
+          .feed > footer button:nth-child(3):hover strong {
+            color: #f91880; }
+      .feed > footer button:nth-child(4) {
+        background-image: url("./assets/icons/icon-share.svg"); }
+        .feed > footer button:nth-child(4):hover {
+          background-image: url("./assets/icons/icon-share-colored.svg"); }
+      .feed > footer button:hover span {
+        opacity: 1;
+        visibility: visible; }
+      .feed > footer button:hover strong {
+        color: #1d9bf0; }
+      .feed > footer button span {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(100% + 2px);
+        padding: 2px 3px;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 2px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 200ms; }
+      .feed > footer button strong {
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #536471;
+        position: relative;
+        left: 30px;
+        transition: all 100ms; }
+
 .container {
   display: flex;
   align-items: flex-start;
@@ -378,13 +557,7 @@ address {
     width: 275px; }
   .container > main {
     width: 600px;
-    height: 100vh;
-    margin-right: 40px;
-    overflow-y: auto;
-    border-right: 1px solid #eff3f4;
-    border-left: 1px solid #eff3f4; }
-    .container > main::-webkit-scrollbar {
-      display: none !important; }
+    margin-right: 40px; }
   .container > aside {
     width: 350px; }
 
@@ -478,6 +651,21 @@ address {
   .gnb button:hover {
     background-color: #0f8ee4; }
 
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border-right: 1px solid #eff3f4;
+  border-left: 1px solid #eff3f4; }
+  main .timeline-header {
+    flex-grow: 0;
+    flex-shrink: 0; }
+  main > div {
+    flex-grow: 1;
+    overflow-y: auto; }
+    main > div::-webkit-scrollbar {
+      display: none !important; }
+
 .timeline > h1 {
   position: absolute;
   width: 1px;
@@ -488,6 +676,11 @@ address {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0; }
+
+.timeline > ol {
+  padding: 8px 0; }
+  .timeline > ol > li:not(:last-child) {
+    border-bottom: 1px solid #eff3f4; }
 
 .timeline-header {
   display: flex;

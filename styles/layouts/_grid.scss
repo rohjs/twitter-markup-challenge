@@ -9,13 +9,8 @@
   }
 
   > main {
-    @include no-scrollbar;
     width: 600px;
-    height: 100vh;
     margin-right: 40px;
-    overflow-y: auto;
-    border-right: 1px solid $border;
-    border-left: 1px solid $border;
   }
 
   > aside {
